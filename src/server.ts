@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import { router as calculateRouter } from './routes/calculate';
 import { languageMiddleware } from './middlewares/language';
 import { errorHandler } from './middlewares/errorHandler';
+import { setupSwagger } from './swagger';
 
 const app = express();
 
@@ -11,6 +12,9 @@ app.use(bodyParser.json());
 
 // Middleware to handle language
 app.use(languageMiddleware);
+
+// Setup Swagger (API documentation)
+setupSwagger(app);
 
 // Routes
 app.use('/calculate-wage', calculateRouter);
