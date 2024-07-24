@@ -23,7 +23,7 @@ This project is a backend API built with Express.js and TypeScript for calculati
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/min-wage-calc.git
+    git clone https://github.com/codeoutin/min-wage-calculator.git
     cd min-wage-calc
     ```
 
