@@ -59,34 +59,7 @@ This project is a backend API built with Express.js and TypeScript for calculati
 To start the server in development mode, run:
 ```bash
 npm run dev
-
-## API Endpoints
-### Calculate Minimum Wage
-- **URL**: `/calculate-wage`
-- **Method**: `POST`
-- **Headers**: 
-  - `Accept-Language` (optional, values: `en`, `de`, `fr`, `it`, default: `en`)
-- **Body**:
-    ```json
-    {
-      "dateOfApplication": "2024-07-01",
-      "placeOfJob": "Zurich",
-      "dateOfBirth": "1990-01-01",
-      "jobDescription": "bricklayer"
-    }
-    ```
-- **Response**:
-    ```json
-    {
-      "dateOfApplication": "2024-07-01",
-      "placeOfJob": "Zurich",
-      "dateOfBirth": "1990-01-01",
-      "jobDescription": "bricklayer",
-      "calculatedWage": "Der berechnete Lohn beträgt 7200 CHF"
-    }
-    ```
-
-- **Note**: Default values for `placeOfJob`, `dateOfApplication`, `dateOfBirth`, and `jobDescription` are prefilled in the API documentation for convenience.
+```
 
 ## API Documentation
 The API documentation is available and provides interactive access to the API endpoints. You can view and interact with the documentation by navigating to:
