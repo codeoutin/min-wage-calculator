@@ -1,11 +1,12 @@
 const wageRates = {
     default: 15,
-    zurich: 20
+    zurich: 20,
+    basel: 19
 };
 
 const wageMultiplierByJob = {
     default: 1,
-    it: 1.5,
+    developer: 1.5,
     bricklayer: 0.9,
     electrician: 1.1,
     painter: 0.65
@@ -14,16 +15,42 @@ const wageMultiplierByJob = {
 export const getWageRate = (dateOfApplication: Date, jobDescription: string, placeOfJob: string, age: number): number => {
     let baseWage = wageRates.default;
 
-    if (dateOfApplication.getFullYear() === 2024) {
+    if (dateOfApplication.getFullYear() <= 2024) {
         baseWage = 0;
+    } else {
+        baseWage = 5;
     }
 
-    if (placeOfJob.toLowerCase() === 'zurich' || placeOfJob === '8001') { // Zip code for Zurich
-        baseWage += wageRates.zurich;
+    switch (placeOfJob.toLowerCase()) {
+        case 'zurich':
+        case '8001': // Zip code for Zurich
+            baseWage += wageRates.zurich;
+            break;
+        case 'basel':
+        case '4056': // Zip code for Basel
+            baseWage += wageRates.basel;
+            break;
+        default:
+            baseWage += wageRates.default;
+            break;
     }
 
-    if (jobDescription.toLowerCase() === 'bricklayer') {
-        baseWage *= wageMultiplierByJob.bricklayer;
+    switch (jobDescription.toLowerCase()) {
+        case 'developer':
+            baseWage *= wageMultiplierByJob.developer;
+            break;
+        case 'bricklayer':
+            baseWage *= wageMultiplierByJob.bricklayer;
+            break;
+        case 'electrician':
+            baseWage *= wageMultiplierByJob.electrician;
+            break;
+        case 'painter':
+            baseWage *= wageMultiplierByJob.painter;
+            break;
+        default:
+            baseWage *= wageMultiplierByJob.default;
+            break;
     }
 
     if (age < 18) {
