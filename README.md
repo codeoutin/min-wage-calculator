@@ -43,9 +43,9 @@ This project is a backend API built with Express.js and TypeScript for calculati
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true
-      },
-      "include": ["src/**/*.ts"],
-      "exclude": ["node_modules"]
+    },
+    "include": ["src/**/*.ts", "src/types/**/*.d.ts"],
+    "exclude": ["node_modules"]
     }
     ```
 
