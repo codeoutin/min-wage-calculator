@@ -7,9 +7,7 @@ This project is a backend API built with Express.js and TypeScript for calculati
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Running the Server](#running-the-server)
-- [API Endpoints](#api-endpoints)
 - [API Documentation](#api-documentation)
-- [Project Structure](#project-structure)
 
 ## Features
 - Calculate minimum wage based on various parameters
@@ -65,29 +63,4 @@ npm run dev
 The API documentation is available and provides interactive access to the API endpoints. You can view and interact with the documentation by navigating to:
 ```
 http://localhost:3000/api-docs
-```
-
-## Project Structure
-```
-min-wage-calc/
-├── src/
-│   ├── controllers/
-│   │   └── wageController.ts
-│   ├── middlewares/
-│   │   └── errorHandler.ts
-│   │   └── language.ts
-│   ├── routes/
-│   │   └── calculate.ts
-│   ├── services/
-│   │   └── wageService.ts
-│   ├── utils/
-│   │   ├── data.ts
-│   │   └── language.ts
-│   └── server.ts
-├── types/
-│   ├── swagger-jsdoc.d.ts
-│   └── swagger-ui-express.d.ts
-├── package.json
-├── tsconfig.json
-└── .gitignore
 ```
