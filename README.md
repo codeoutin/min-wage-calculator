@@ -10,7 +10,6 @@ This project is a backend API built with Express.js and TypeScript for calculati
 - [API Endpoints](#api-endpoints)
 - [API Documentation](#api-documentation)
 - [Project Structure](#project-structure)
-- [License](#license)
 
 ## Features
 - Calculate minimum wage based on various parameters
